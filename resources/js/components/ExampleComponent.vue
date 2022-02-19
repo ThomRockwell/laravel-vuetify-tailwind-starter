@@ -12,8 +12,8 @@
             </v-btn>
             <v-slider></v-slider>
             <v-date-picker></v-date-picker>
-            <div class="bg-yellow-400 p-8 text-xl text-center rounded-xl w-max mx-auto">Testing Tailwind CSS...</div>
-            <div class="bg-blue-300 w-2/12 mx-auto text-center text-xl p-4 rounded-lg mt-4 cursor-pointer" @click="testVuex">Test Vuex</div>
+            <div class="bg-yellow-400 p-4 text-xl text-center rounded-lg w-3/12 mx-auto">Testing Tailwind CSS...</div>
+            <div class="bg-blue-300 w-2/12 mx-auto text-center text-xl p-4 rounded-lg mt-4 cursor-pointer" @click="testVuex">Test Vuex: {{ getCount }}</div>
         </v-container>
     </v-app>
 </template>
@@ -31,6 +31,12 @@
                 this.$store.dispatch('increment');
             }
 
+        },
+
+        computed: {
+            getCount(){
+                return this.$store.state.count;
+            }
         }
 
     }
