@@ -24,3 +24,5 @@ Route::get('/test', function () {
 
 
 
+Route::get('/{any}', [App\Http\Controllers\AppController::class, 'index'])
+    ->where('any','^(?!api).*$');
