@@ -2112,6 +2112,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -20353,6 +20360,15 @@ var render = function () {
             },
             [_vm._v("Test Vuex: " + _vm._s(_vm.getCount))]
           ),
+          _vm._v(" "),
+          _c("div", { staticClass: "rockwell-container" }, [
+            _vm._v(
+              "This is the rockwell-container style from the sass modules.\n            "
+            ),
+            _c("div", { staticClass: "rockwell-button bg-red-300 mt-4" }, [
+              _vm._v("And this is the rockwell-button class"),
+            ]),
+          ]),
         ],
         1
       ),
