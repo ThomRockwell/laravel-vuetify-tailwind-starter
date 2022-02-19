@@ -1,6 +1,9 @@
 <template>
     <v-app app>
+
+
         <v-container>
+
             <v-btn color="primary">
                 Primary
             </v-btn>
@@ -17,11 +20,18 @@
 
 
 
-            <div class="rockwell-container">This is the rockwell-container style from the sass modules.
+            <div class="rockwell-container mt-4">This is the rockwell-container style from the sass modules.
                 <div class="rockwell-button bg-red-300 mt-4">And this is the rockwell-button class</div>
             </div>
 
+            <div class="mx-auto w-1/2 mt-4">
+                The BreakPoints Displayer Component can be used to see how and when things change at different breakpoints.
+                <breakpoints-displayer></breakpoints-displayer>
+            </div>
+
         </v-container>
+
+
     </v-app>
 </template>
 
