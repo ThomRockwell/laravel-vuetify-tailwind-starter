@@ -8,6 +8,8 @@ import router from './router';
 
 import App from './components/App';
 
+import store from './store';
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 const app = new Vue({
@@ -19,6 +21,7 @@ const app = new Vue({
     },
 
     vuetify,
-    router
+    router,
+    store
 
 });
