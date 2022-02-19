@@ -10,7 +10,7 @@ export default new VueRouter({
 
     routes: [
 
-        { path: '/test-vue-router',
+        { path: '/',
             component: ExampleComponent
         },
     ],

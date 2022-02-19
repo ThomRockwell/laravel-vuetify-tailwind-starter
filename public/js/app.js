@@ -2075,7 +2075,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "App"
 });
@@ -2093,6 +2092,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
 //
 //
 //
@@ -2201,7 +2203,7 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
-    path: '/test-vue-router',
+    path: '/',
     component: _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_2__["default"]
   }],
   mode: 'history'
@@ -20231,11 +20233,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [_vm._v("\n\n    This is the App Vue Component\n    "), _c("router-view")],
-    1
-  )
+  return _c("div", [_c("router-view")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -20260,32 +20258,44 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              ),
-            ]),
+  return _c(
+    "v-app",
+    { attrs: { app: "" } },
+    [
+      _c(
+        "v-container",
+        [
+          _c("v-btn", { attrs: { color: "primary" } }, [
+            _vm._v("\n            Primary\n        "),
           ]),
-        ]),
-      ]),
-    ])
-  },
-]
+          _vm._v(" "),
+          _c("v-btn", { attrs: { color: "secondary" } }, [
+            _vm._v("\n            Secondary\n        "),
+          ]),
+          _vm._v(" "),
+          _c("v-btn", { attrs: { color: "error" } }, [
+            _vm._v("\n            Error\n        "),
+          ]),
+          _vm._v(" "),
+          _c("v-slider"),
+          _vm._v(" "),
+          _c("v-date-picker"),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "bg-yellow-400 p-8 text-4xl text-center rounded-xl",
+            },
+            [_vm._v("Testing Tailwind CSS...")]
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
