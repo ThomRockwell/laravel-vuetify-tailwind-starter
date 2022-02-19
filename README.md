@@ -8,7 +8,7 @@
 
 ## About
 
-This is a starter app using Laravel, Vue JS, Vuetify, and Tailwind CSS. It includes Vue-Router and Vuex. Both of which have sample implementations to get your started. The idea is that instead of trying remember how to get all of these things to work together each time you want to start a new project, you can just clone this baby and get immediately into the fun stuff. Creating!
+This is a starter app using Laravel, Vue JS, Vuetify, and Tailwind CSS. It includes Vue-Router and Vuex. Both of which have sample implementations to get your started. The idea is that instead of trying remember how to get all of these things to work together each time you want to start a new project, you can just clone this baby and get immediately into the fun stuff - Creating!
 
 
 Some (or most) of the versions are not the most current versions. They are what I have been using in my work presently. Eventually, I will migrate everything. This is a "working version" that has everything working together so you don't have to worry about it.
@@ -25,16 +25,17 @@ Some (or most) of the versions are not the most current versions. They are what 
         git clone https://github.com/ThomRockwell/laravel-vuetify-tailwind-starter.git
         
 Make a fresh .env file (just copy the .env.example and rename it)
-
-
-        php artisan key:generate
         
         composer update && npm install
         
-        npm run watch
+        php artisan key:generate
         
         php artisan serve
         
 Open site in your browser and do your thing!
 
+<hr>
 
+Or, if you want to be really fancy, just copy and paste this Mega-Line.
+
+    git clone https://github.com/ThomRockwell/laravel-vuetify-tailwind-starter.git && cd laravel-vuetify-tailwind-starter && cp .env.example .env && composer update && npm install && php artisan key:generate && php artisan serve
