@@ -11,7 +11,10 @@ export default new VueRouter({
     routes: [
 
         { path: '/',
-            component: ExampleComponent
+            component: ExampleComponent,
+            props: {
+                titleProp: 'Example Component'
+            }
         },
     ],
 
