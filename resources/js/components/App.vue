@@ -19,5 +19,8 @@
 </script>
 
 <style scoped>
-
+    @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+    * {
+        font-family: Nunito, Arial, Helvetica, sans-serif
+    }
 </style>
