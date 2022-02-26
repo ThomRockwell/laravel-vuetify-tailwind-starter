@@ -3,7 +3,8 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import ExampleComponent from "./components/ExampleComponent";
+
+// Lazy loading syntax is optional, but recommended. https://vueschool.io/lessons/lazy-loading-routes-vue-cli-only
 
 
 export default new VueRouter({
@@ -11,7 +12,7 @@ export default new VueRouter({
     routes: [
 
         { path: '/',
-            component: ExampleComponent,
+            component: () => import(/* webpackChunkName: "example-component" */ './components/ExampleComponent'),
             props: {
                 titleProp: 'Example Component'
             }
