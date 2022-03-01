@@ -4,7 +4,7 @@
 
         <v-container>
 
-            <h1 class="text-5xl w-max px-4 mx-auto mb-4 font-bold">{{ titleProp }}</h1>
+            <page-title-header>{{ titleProp }}</page-title-header>
 
 
             <div class="bg-gray-100 p-4 mb-4">The fact that we are seeing this page means that Laravel is working as well as Vue JS and Vue Router. Boom!</div>
@@ -57,8 +57,9 @@
 </template>
 
 <script>
+    import PageTitleHeader from "./global/PageTitleHeader";
     export default {
-
+        components: {PageTitleHeader},
         mounted() {
 
             console.log('Example Component mounted.');

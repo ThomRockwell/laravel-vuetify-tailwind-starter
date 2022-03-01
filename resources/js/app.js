@@ -16,6 +16,7 @@ Vue.mixin(titleMixin);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('breakpoints-displayer', require('./components/global/BreakpointsDisplayer.vue').default);
+Vue.component('page-title-heaader', require('./components/global/PageTitleHeader.vue').default);
 
 const app = new Vue({
 
