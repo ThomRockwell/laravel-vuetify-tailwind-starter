@@ -2151,6 +2151,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2208,8 +2210,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "BreakpointsDisplayer"
+  name: "BreakpointsDisplayer",
+  data: function data() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  created: function created() {
+    window.addEventListener("resize", this.onResize);
+  },
+  destroyed: function destroyed() {
+    window.removeEventListener("resize", this.onResize);
+  },
+  methods: {
+    onResize: function onResize(e) {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+    }
+  }
 });
 
 /***/ }),
@@ -20830,6 +20874,8 @@ var render = function () {
       _c(
         "v-container",
         [
+          _c("breakpoints-displayer"),
+          _vm._v(" "),
           _c("page-title-header", [_vm._v(_vm._s(_vm.titleProp))]),
           _vm._v(" "),
           _c("div", { staticClass: "bg-gray-100 p-4 mb-4" }, [
@@ -20969,59 +21015,88 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "flex relative w-full bg-blue-600 mb-12" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex displayer visible sm:invisible bg-purple-300 justify-between",
+        },
+        [
+          _c("div", { staticClass: "w-max" }, [
+            _vm._v("Extra Small (default breakpoint)"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-max" }, [
+            _vm._v("w:" + _vm._s(_vm.width) + " | h: " + _vm._s(_vm.height)),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex displayer invisible sm:visible md:invisible bg-green-300 justify-between",
+        },
+        [
+          _c("div", { staticClass: "w-max" }, [_vm._v("Small")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-max" }, [
+            _vm._v("w:" + _vm._s(_vm.width) + " | h: " + _vm._s(_vm.height)),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex displayer invisible md:visible lg:invisible bg-blue-300 justify-between",
+        },
+        [
+          _c("div", { staticClass: "w-max" }, [_vm._v("Medium")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-max" }, [
+            _vm._v("w:" + _vm._s(_vm.width) + " | h: " + _vm._s(_vm.height)),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex displayer invisible lg:visible xl:invisible bg-red-300 justify-between",
+        },
+        [
+          _c("div", { staticClass: "w-max" }, [_vm._v("Large")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-max" }, [
+            _vm._v("w:" + _vm._s(_vm.width) + " | h: " + _vm._s(_vm.height)),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex displayer invisible xl:visible bg-indigo-300 justify-between",
+        },
+        [
+          _c("div", { staticClass: "w-max" }, [_vm._v("Extra Large")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-max" }, [
+            _vm._v("w:" + _vm._s(_vm.width) + " | h: " + _vm._s(_vm.height)),
+          ]),
+        ]
+      ),
+    ]),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "flex relative w-full bg-blue-600 mb-12" },
-      [
-        _c(
-          "div",
-          { staticClass: "displayer visible sm:invisible bg-purple-300" },
-          [_vm._v("Extra Small (default breakpoint)")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "displayer invisible sm:visible md:invisible bg-green-300",
-          },
-          [_vm._v("Small")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "displayer invisible md:visible lg:invisible bg-blue-300",
-          },
-          [_vm._v("Medium")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "displayer invisible lg:visible xl:invisible bg-red-300",
-          },
-          [_vm._v("Large")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "displayer invisible xl:visible bg-indigo-300" },
-          [_vm._v("Extra Large")]
-        ),
-      ]
-    )
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -4,6 +4,8 @@
 
         <v-container>
 
+            <breakpoints-displayer></breakpoints-displayer>
+
             <page-title-header>{{ titleProp }}</page-title-header>
 
 
