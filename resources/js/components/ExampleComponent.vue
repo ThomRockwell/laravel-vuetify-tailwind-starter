@@ -16,17 +16,7 @@
             <div class="bg-gray-100 p-4 mb-4">The three Buttons, the Slider and DatePicker below are all Vuetify elements. So clearly, Vuetify is working.</div>
 
 
-            <v-btn color="primary">
-                Primary
-            </v-btn>
-            <v-btn color="secondary">
-                Secondary
-            </v-btn>
-            <v-btn color="error">
-                Error
-            </v-btn>
-            <v-slider></v-slider>
-            <v-date-picker></v-date-picker>
+            This text was added for the first push.
 
             <hr class="border-gray-500 border-2 my-4 rounded">
 
